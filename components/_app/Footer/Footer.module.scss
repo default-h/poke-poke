@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background-color: var(--primary);
+  width: 100vw;
+  gap: 1rem;
+  color: var(--white);
+
+  .title {
+    font-family: 'Bowlby One SC', cursive;
+    font-weight: normal;
+    text-shadow: var(--text-shadow);
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    width: 100vw;
+    .icons {
+      -webkit-filter: drop-shadow(7px 7px 1px rgba(0, 0, 0, 0.7));
+      filter: drop-shadow(7px 7px 1px rgba(0, 0, 0, 0.7));
+
+      transition: all 0.5s;
+      transition-timing-function: var(--bounce);
+      transform-origin: 50% 50%;
+    }
+    .facebook:hover path {
+      fill: #4267b2;
+      transform: scale(1.25);
+    }
+    .twitter:hover path {
+      fill: #1da1f2;
+      transform: scale(1.25);
+    }
+    .instagram:hover path {
+      fill: #c13584;
+      transform: scale(1.25);
+    }
+    .discord:hover path {
+      fill: #7289d9;
+      transform: scale(1.25);
+    }
+    .youtube:hover path {
+      fill: #ff0000;
+      transform: scale(1.25);
+    }
+    .twitch:hover path {
+      fill: #6441a4;
+      transform: scale(1.25);
+    }
+  }
+
+  .navlinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    color: var(--yellow);
+    font-family: var(--secondary-font);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    .link {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .disclaimer {
+    font-family: var(--paragraph-font);
+    text-shadow: var(--text-shadow);
+    text-align: center;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    .title {
+      font-size: 2rem;
+    }
+    .socials {
+      display: flex;
+      gap: 5rem;
+
+      justify-content: center;
+      svg {
+        transform: scale(1.5);
+      }
+    }
+  }
+}

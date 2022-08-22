@@ -1,0 +1,63 @@
+@font-face {
+  font-family: 'Pokemon';
+  src: url('../public/assets/fonts/PokemonHollow.woff2') format('woff2');
+}
+
+:root {
+  --black: #212427;
+  --white: #fdfdfd;
+  --yellow: #fad921;
+  --yellow-btn: linear-gradient(#fad921, #fcb700);
+  --red-btn: linear-gradient(#ee4b2b, #c41e3a);
+  --primary: #0054ad;
+  --primary-dark: #073f7b;
+  --text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.25);
+  --box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 2px;
+  --bounce: cubic-bezier(0.07, 1.6, 0.78, 1);
+  --brand-font: 'Bowlby One SC', cursive;
+  --secondary-font: 'Anton', sans-serif;
+  --paragraph-font: Arial, Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+img,
+Image {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
