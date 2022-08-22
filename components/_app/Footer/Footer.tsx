@@ -1,4 +1,5 @@
 import styles from './Footer.module.scss';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -30,9 +31,11 @@ const Footer = () => {
         </a>
       </div>
       <div className={styles.navlinks}>
-        <a href='/' aria-label='Frequeny Asked Questions page'>
-          <p className={styles.link}>FAQ</p>
-        </a>
+        <Link href='/'>
+          <a aria-label='Frequeny Asked Questions page'>
+            <p className={styles.link}>FAQ</p>
+          </a>
+        </Link>
       </div>
       <p className={styles.disclaimer}>Assets do not belong to me.</p>
     </footer>

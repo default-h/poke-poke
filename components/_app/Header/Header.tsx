@@ -27,14 +27,9 @@ const Header = () => {
           }`}
         >
           <li className={styles.help}>
-            <a
-              href='/'
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='Help page - link opens in a new tab.'
-            >
-              help
-            </a>
+            <Link href='/'>
+              <a aria-label='Frequeny Asked Questions page'>help</a>
+            </Link>
           </li>
         </ul>
       </nav>
