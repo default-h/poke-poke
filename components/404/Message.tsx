@@ -16,7 +16,7 @@ const Message = () => {
         </Link>
       </figure>
       <div className={styles.image}>
-        <Image src={duck} />
+        <Image src={duck} alt='A confused Psyduck' />
       </div>
     </section>
   );
