@@ -32,6 +32,7 @@ const Pokemon: React.FC<any> = props => {
           width={350}
           height={350}
           draggable='false'
+          className={styles.fade}
         />
       </figure>
     </section>
