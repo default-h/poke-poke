@@ -54,15 +54,11 @@ export default function Home() {
         <section className={styles.container}>
           <div className={styles['left-container']}>
             <SearchBar getPokemon={getPokemon} />
-            <div className={styles.errors}>
-              {notFound ? <p>{empty}</p> : null}
+            <strong className={styles.errors}>
+              {notFound ? <>{empty}</> : null}
 
-              {loaded ? (
-                <div>
-                  <Image src={clock} alt='Loading' />
-                </div>
-              ) : null}
-            </div>
+              {loaded ? <Image src={clock} alt='Loading icon' /> : null}
+            </strong>
           </div>
           <div className={styles['right-container']}>
             {!loaded && pokemon ? (
@@ -77,20 +73,19 @@ export default function Home() {
             ) : null}
           </div>
         </section>
-        <section>
-          <div className={styles['right-container']}>
-            {!loaded && pokemon ? (
-              <PokemonData
-                abilities={pokemon['abilities']}
-                stats={pokemon['stats']}
-                types={pokemon['types']}
-                items={pokemon['held_items']}
-                weightKg={pokemon['weight'] / 10}
-                weightLbs={(pokemon['weight'] / 10) * 2.2046}
-              />
-            ) : null}
-          </div>
-        </section>
+
+        {!loaded && pokemon ? (
+          <section>
+            <PokemonData
+              abilities={pokemon['abilities']}
+              stats={pokemon['stats']}
+              types={pokemon['types']}
+              items={pokemon['held_items']}
+              weightKg={pokemon['weight'] / 10}
+              weightLbs={(pokemon['weight'] / 10) * 2.2046}
+            />
+          </section>
+        ) : null}
       </main>
     </>
   );

@@ -10,30 +10,25 @@ interface SearchBarProps {
 const SearchBar: React.FC<SearchBarProps> = props => {
   const [search, setSearch] = useState('');
   return (
-    <section className={styles.container}>
+    <div className={styles.container}>
       <h1>Look up Any Pokémon!</h1>
-      <div className={styles['form-container']}>
-        <form
-          onSubmit={e => {
-            e.preventDefault();
-          }}
-        >
-          <input
-            type='text'
-            id='search'
-            name='search'
-            placeholder='Insert Pokémon name here'
-            onChange={search => setSearch(search.target.value)}
-          />
-        </form>
-        <button
-          className={styles.button}
-          onClick={e => props.getPokemon(search)}
-        >
-          Search
-        </button>
-      </div>
-    </section>
+
+      <form
+        onSubmit={e => {
+          e.preventDefault();
+        }}
+      >
+        <input
+          type='text'
+          id='search'
+          name='search'
+          onChange={search => setSearch(search.target.value)}
+        />
+      </form>
+      <button className={styles.button} onClick={e => props.getPokemon(search)}>
+        Search
+      </button>
+    </div>
   );
 };
 

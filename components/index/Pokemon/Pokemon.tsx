@@ -5,9 +5,8 @@ import styles from './Pokemon.module.scss';
 
 const Pokemon: React.FC<any> = props => {
   return (
-    <section className={styles.container}>
-      <div className={styles.header}>
-        <h2 className={styles.pokename}>{props.name.toUpperCase()}</h2>
+    <div className={styles.container}>
+      <figure className={styles.header}>
         {/* <div className={styles.sprite}>
           <Image
             src={props.sprite1}
@@ -23,19 +22,22 @@ const Pokemon: React.FC<any> = props => {
             height={100}
           />
         </div> */}
-      </div>
+      </figure>
 
-      <figure className={styles.artwork}>
+      <figure className={styles.fade}>
+        <figcaption className={styles.pokename}>
+          {props.name.toUpperCase()}
+        </figcaption>
         <Image
           src={props.artwork}
           alt={props.name}
           width={350}
           height={350}
           draggable='false'
-          className={styles.fade}
+          className={styles.artwork}
         />
       </figure>
-    </section>
+    </div>
   );
 };
 

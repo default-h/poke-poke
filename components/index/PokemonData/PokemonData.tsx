@@ -5,54 +5,51 @@ import styles from './PokemonData.module.scss';
 
 const PokemonData: React.FC<any> = props => {
   return (
-    <section className={styles.container}>
-      <div className={styles['attributes-container']}>
-        <div className={styles.attributes}>
-          <h3>Abilities</h3>
-
+    <div className={styles['attributes-container']}>
+      <section className={styles.attributes}>
+        <h3>Abilities</h3>
+        <ul>
           {props.abilities.map((ability: any, key: any) => (
-            <div key={key}>
-              <p>{ability.ability.name}</p>
-            </div>
+            <li key={key}>{ability.ability.name}</li>
           ))}
-        </div>
+        </ul>
+      </section>
 
-        <div className={styles.attributes}>
-          <h3>Types</h3>
+      <section className={styles.attributes}>
+        <h3>Types</h3>
+        <ul>
           {props.types.map((type: any, key: any) => (
-            <div key={key}>
-              <p>{type.type.name}</p>
-            </div>
+            <li key={key}>{type.type.name}</li>
           ))}
-        </div>
+        </ul>
+      </section>
 
-        <div className={styles.attributes}>
-          <h3>Stats</h3>
+      <section className={styles.attributes}>
+        <h3>Stats</h3>
+        <ul>
           {props.stats.map((stat: any, key: any) => (
-            <div key={key}>
-              <p>{stat.stat.name}</p>
-            </div>
-          ))}
-        </div>
+            <li key={key}>{stat.stat.name}</li>
+          ))}{' '}
+        </ul>
+      </section>
 
-        <div className={styles.attributes}>
-          <h3>Items</h3>
+      <section className={styles.attributes}>
+        <h3>Items</h3>
+        <ul>
           {props.items.map((item: any, key: any) => (
-            <div key={key}>
-              <p>{item.item.name}</p>
-            </div>
+            <li key={key}>{item.item.name}</li>
           ))}
-        </div>
+        </ul>
+      </section>
 
-        <div className={styles.attributes}>
-          <h3>Weight</h3>
-          <div>
-            <p>{props.weightKg}</p>
-            <p>{Math.round(props.weightLbs * 10) / 10}</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      <section className={styles.attributes}>
+        <h3>Weight</h3>
+        <ul>
+          <li>{props.weightKg}</li>
+          <li>{Math.round(props.weightLbs * 10) / 10}</li>
+        </ul>
+      </section>
+    </div>
   );
 };
 
