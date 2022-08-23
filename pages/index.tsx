@@ -3,7 +3,8 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 
 import SearchBar from '../components/index/SearchBar/SearchBar';
-import Data from '../components/index/SearchBar/Data';
+import Pokemon from '../components/index/Pokemon/Pokemon';
+import PokemonData from '../components/index/PokemonData/PokemonData';
 import { fetchPokemon } from '../utils/fetchPokemon';
 import styles from '../styles/index.module.scss';
 
@@ -65,13 +66,21 @@ export default function Home() {
           </div>
           <div className={styles['right-container']}>
             {!loaded && pokemon ? (
-              <Data
+              <Pokemon
                 name={pokemon['name']}
                 artwork={
                   pokemon['sprites']['other']['official-artwork'][
                     'front_default'
                   ]
                 }
+              />
+            ) : null}
+          </div>
+        </section>
+        <section>
+          <div className={styles['right-container']}>
+            {!loaded && pokemon ? (
+              <PokemonData
                 abilities={pokemon['abilities']}
                 stats={pokemon['stats']}
                 types={pokemon['types']}
