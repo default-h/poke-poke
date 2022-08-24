@@ -3,18 +3,25 @@
   src: url('../public/assets/fonts/PokemonHollow.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'FrancoisOne';
+  src: url('../public/assets/fonts/FrancoisOne-Regular.woff2') format('woff2');
+}
+
 :root {
   --black: #212427;
-  --white: #fdfdfd;
+  --white: #ffffff;
+  --off-white: #f8f7f8;
+  --gray: #a7a7a7;
   --yellow: #fad921;
   --yellow-btn: linear-gradient(#fad921, #fcb700);
   --red-btn: linear-gradient(#ee4b2b, #c41e3a);
   --primary: #0054ad;
   --primary-dark: #073f7b;
   --text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.25);
-  --box-shadow: rgba(0, 0, 0, 0.2) 4px 4px 2px;
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   --bounce: cubic-bezier(0.07, 1.6, 0.78, 1);
-  --brand-font: 'Bowlby One SC', cursive;
+  --brand-font: 'FrancoisOne';
   --secondary-font: 'Anton', sans-serif;
   --paragraph-font: Arial, Roboto, sans-serif;
 }
@@ -32,6 +39,7 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
+  background-color: var(--off-white);
 }
 
 ul {

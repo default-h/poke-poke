@@ -7,7 +7,7 @@ const Footer = () => {
       <h3 className={styles.title}>Footer Title</h3>
       <div className={styles.socials}>
         <a
-          href='https://github.com/default-h/poke-search'
+          href='https://github.com/default-h/poke-poke'
           target='_blank'
           rel='noopener noreferrer'
           aria-label='GitHub repository (link opens in a new tab)'
