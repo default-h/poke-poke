@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 
 import SearchBar from '../components/index/SearchBar/SearchBar';
-import Pokemon from '../components/index/Pokemon/Pokemon';
+import Pokemon from '../components/index/PokemonCard/PokemonCard';
 import PokemonData from '../components/index/PokemonData/PokemonData';
 import { fetchPokemon } from '../utils/fetchPokemon';
 import styles from '../styles/index.module.scss';
@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Poké Search | Home</title>
+        <title>Poké Poké | Home</title>
         <meta
           name='description'
           content='A free tool for searching Pokémon information.'
@@ -64,25 +64,26 @@ export default function Home() {
             {!loaded && pokemon ? (
               <Pokemon
                 name={pokemon['name']}
-                artwork={
-                  pokemon['sprites']['other']['official-artwork'][
-                    'front_default'
-                  ]
-                }
+                id={pokemon['id']}
+                sprite={pokemon['sprites']['front_default']}
+                types={pokemon['types']}
+                weightKg={pokemon['weight'] / 10}
+                weightLbs={(pokemon['weight'] / 10) * 2.2046}
               />
             ) : null}
           </div>
         </section>
 
         {!loaded && pokemon ? (
-          <section>
+          <section className={styles.abilities}>
             <PokemonData
               abilities={pokemon['abilities']}
               stats={pokemon['stats']}
-              types={pokemon['types']}
               items={pokemon['held_items']}
-              weightKg={pokemon['weight'] / 10}
-              weightLbs={(pokemon['weight'] / 10) * 2.2046}
+              artwork={
+                pokemon['sprites']['other']['official-artwork']['front_default']
+              }
+              statistics={pokemon['stats']}
             />
           </section>
         ) : null}
