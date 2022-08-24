@@ -8,10 +8,6 @@
   filter: drop-shadow(var(--text-shadow));
 }
 
-.logo {
-  min-width: 43px;
-}
-
 .navbar {
   width: 100vw;
   border-top: 3px solid var(--primary-dark);
@@ -24,6 +20,11 @@
 
   margin-left: auto;
   margin-right: auto;
+
+  .logo {
+    min-width: 50px;
+    max-width: 50px;
+  }
 
   nav {
     max-width: 83rem;
