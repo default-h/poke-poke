@@ -4,7 +4,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 10rem;
+  margin-top: 2.5rem;
 
   .left {
     display: flex;
@@ -20,6 +20,7 @@
     }
   }
   .right {
+    margin-top: 12rem;
   }
 }
 .abilities {
@@ -36,6 +37,7 @@
 
     .right {
       width: 40%;
+      margin-top: 0;
     }
   }
 }
