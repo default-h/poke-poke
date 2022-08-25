@@ -16,15 +16,8 @@
   --gray: #a7a7a7;
   --yellow: #f7ba14;
   --gold-id: linear-gradient(#fad921, #f7ba14);
-  --yellow-btn: linear-gradient(#fad921, #fcb700);
-  --red-btn: linear-gradient(#ee4b2b, #c41e3a);
-  --primary: #0054ad;
-  --primary-dark: #073f7b;
-  --text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.25);
   --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  --bounce: cubic-bezier(0.07, 1.6, 0.78, 1);
   --brand-font: 'FrancoisOne';
-  --secondary-font: 'Anton', sans-serif;
   --paragraph-font: Arial, Roboto, sans-serif;
 }
 
@@ -65,13 +58,4 @@ button {
   cursor: pointer;
   background: none;
   border: none;
-}
-
-img,
-Image {
-  -webkit-user-drag: none;
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
 }

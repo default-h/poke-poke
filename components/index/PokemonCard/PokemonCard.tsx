@@ -44,7 +44,10 @@ const PokemonCard: React.FC<any> = props => {
             </div>
             <div className={styles.types}>
               {props.types.map((type: any, key: any) => (
-                <span key={key} className={styles.type}>
+                <span
+                  key={key}
+                  className={`${styles[type.type.name]} ${styles.type}`}
+                >
                   {type.type.name}
                 </span>
               ))}
