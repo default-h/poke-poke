@@ -23,6 +23,7 @@ const PokemonData: React.FC<any> = props => {
                 max={255}
                 now={stat.base_stat}
                 label={stat.base_stat}
+                variant='warning'
               />
             </li>
           ))}

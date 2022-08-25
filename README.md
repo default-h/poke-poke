@@ -1,7 +1,7 @@
 # Poké-Poké ⚡
 
 <p align="center">
-Live Site: https://poke-poke-nu.vercel.app/
+Live Site: https://poke-poke.vercel.app/
 <br/>
 Video Demo:TBC
 

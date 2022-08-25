@@ -34,11 +34,8 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
-  background-color: var(--off-white);
-}
 
-body {
-  height: 100vh;
+  background: url('../public/assets/images/pattern.png');
 }
 
 ul {

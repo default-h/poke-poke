@@ -20,6 +20,9 @@
     }
   }
   .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 12rem;
   }
 }
@@ -37,7 +40,8 @@
 
     .right {
       width: 40%;
-      margin-top: 0;
+      margin-top: 10rem;
+      height: 25rem;
     }
   }
 }

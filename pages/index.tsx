@@ -4,11 +4,12 @@ import React, { useState } from 'react';
 
 import SearchBar from '../components/index/SearchBar/SearchBar';
 import PokemonCard from '../components/index/PokemonCard/PokemonCard';
-import PokemonStats from '../components/index/PokemonData/PokemonStats';
+import PokemonStats from '../components/index/PokemonStats/PokemonStats';
 import { fetchPokemon } from '../utils/fetchPokemon';
 import styles from '../styles/index.module.scss';
 
 import clock from '../public/assets/icons/clock.svg';
+import psyduck from '../public/assets/images/psyducknotfound.png';
 
 export default function Home() {
   const [pokemon, setPokemon] = useState();
@@ -61,7 +62,7 @@ export default function Home() {
             </strong>
           </div>
           <div className={styles['right']}>
-            {!loaded && pokemon ? (
+            {!loaded && pokemon && !notFound ? (
               <PokemonCard
                 name={pokemon['name']}
                 id={pokemon['id']}
@@ -78,10 +79,15 @@ export default function Home() {
                 }
               />
             ) : null}
+            <figure>
+              {notFound ? (
+                <Image src={psyduck} width={400} height={400} />
+              ) : null}
+            </figure>
           </div>
         </section>
 
-        {!loaded && pokemon ? (
+        {!loaded && pokemon && !notFound ? (
           <section className={styles.abilities}>
             <PokemonStats
               abilities={pokemon['abilities']}

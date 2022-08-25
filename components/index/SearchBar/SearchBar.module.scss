@@ -10,6 +10,7 @@
   h1 {
     font-size: 3rem;
     text-align: center;
+    font-family: var(--brand-font);
   }
 
   input {
@@ -33,7 +34,7 @@
     border: none;
     font-size: 1.5rem;
     padding: 0.3rem 1.5rem;
-    background-color: var(--black);
+    background: var(--black);
     border-radius: 1rem;
   }
 }

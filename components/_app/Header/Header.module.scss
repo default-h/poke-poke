@@ -186,26 +186,6 @@
           font-size: 1.3rem;
         }
       }
-
-      .play-container {
-        .right {
-          transform: scale(1);
-          margin-top: 5.75rem;
-
-          &:hover {
-            transform: rotate(6deg) scale(1);
-          }
-        }
-      }
     }
   }
-}
-
-.signin {
-  background-color: var(--primary);
-  border-radius: 1rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  color: var(--black);
-  font-family: ObjectifyM;
 }
