@@ -1,7 +1,5 @@
 # Poké-Poké ⚡
 
-![Screenshot of Website](https://i.imgur.com/ucPzHl4.jpg)
-
 <p align="center">
 Live Site: https://poke-poke-nu.vercel.app/
 <br/>

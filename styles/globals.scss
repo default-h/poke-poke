@@ -9,11 +9,13 @@
 }
 
 :root {
-  --black: #212427;
+  --black: #3a3a3a;
+  --black-card: linear-gradient(#3a3a3a, #2d3436);
   --white: #ffffff;
   --off-white: #f8f7f8;
   --gray: #a7a7a7;
-  --yellow: #fad921;
+  --yellow: #f7ba14;
+  --gold-id: linear-gradient(#fad921, #f7ba14);
   --yellow-btn: linear-gradient(#fad921, #fcb700);
   --red-btn: linear-gradient(#ee4b2b, #c41e3a);
   --primary: #0054ad;
@@ -40,6 +42,10 @@ body {
   width: 100%;
   overflow-x: hidden;
   background-color: var(--off-white);
+}
+
+body {
+  height: 100vh;
 }
 
 ul {

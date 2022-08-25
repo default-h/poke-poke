@@ -10,7 +10,6 @@
 
 .navbar {
   width: 100vw;
-  border-top: 3px solid var(--primary-dark);
 
   height: 70px;
   display: flex;
@@ -63,8 +62,6 @@
   border-left: 5px solid var(--white);
   border-top: 5px solid var(--white);
   border-radius: 2rem 0 0 0;
-
-  color: var(--white);
 }
 .menu li,
 .menu button {

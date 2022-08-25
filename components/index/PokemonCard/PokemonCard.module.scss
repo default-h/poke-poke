@@ -1,14 +1,14 @@
 @keyframes bounce {
   0% {
-    transform: translateY(-5%);
+    transform: translateY(-2.5%);
   }
 
   50% {
-    transform: translateY(5%);
+    transform: translateY(2.5%);
   }
 
   100% {
-    transform: translateY(-5%);
+    transform: translateY(-2.5%);
   }
 }
 
@@ -36,9 +36,10 @@
     position: relative;
   }
   .pokename {
-    color: var(--black);
+    color: var(--white);
     font-family: pokemon;
     font-size: 2.75rem;
+    margin: 0;
   }
 
   .card {
@@ -46,15 +47,34 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
     position: relative;
-    animation: bounce 5.5s infinite;
+    animation: bounce 5s infinite;
     animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
-    background-color: var(--white);
+    background: var(--black-card);
     border-radius: 1.5rem;
-    overflow: hidden;
+
     box-shadow: var(--box-shadow);
     width: 20rem;
     font-family: var(--brand-font);
+    padding-top: 5rem;
+    padding-bottom: 1.25rem;
+
+    .identifier {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: -2.25rem;
+
+      border-radius: 1.5rem;
+      padding: 0.2rem 1.5rem;
+      background: var(--gold-id);
+
+      color: var(--black);
+      font-size: 1.4rem;
+      font-family: var(--brand-font);
+    }
 
     .top {
       width: inherit;
@@ -63,18 +83,16 @@
       align-items: center;
       justify-content: center;
 
-      .sprite1 {
-        //-webkit-filter: drop-shadow(0px 0px 0px var(--black));
-        filter: drop-shadow(3px 2px 3px rgba(0, 0, 0, 0.3));
-      }
-      .identifier {
-        position: absolute;
-        top: 0.4rem;
-        right: 1rem;
-        color: var(--gray);
-        font-size: 1.4rem;
+      position: relative;
 
-        font-family: pokemon;
+      .sprite {
+        position: absolute;
+        bottom: -2rem;
+      }
+
+      .sprite1 {
+        -webkit-filter: drop-shadow(3px 2px 3px rgba(0, 0, 0, 0.3));
+        filter: drop-shadow(3px 2px 3px rgba(0, 0, 0, 0.3));
       }
     }
 
@@ -83,12 +101,44 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      color: var(--white);
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      .height-weight {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 1.25rem;
+        text-align: center;
+
+        section {
+          line-height: 0.25;
+
+          p {
+            color: var(--yellow);
+          }
+        }
+      }
       .types {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 1rem;
+        flex-direction: row;
+        gap: 0.5rem;
         text-transform: capitalize;
+        margin-bottom: 1.25rem;
+        .type {
+          border: 1px solid var(--white);
+          border-radius: 1rem;
+          padding: 0.1rem 0.5rem;
+        }
       }
     }
   }

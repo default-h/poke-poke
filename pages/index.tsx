@@ -3,8 +3,8 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 
 import SearchBar from '../components/index/SearchBar/SearchBar';
-import Pokemon from '../components/index/PokemonCard/PokemonCard';
-import PokemonData from '../components/index/PokemonData/PokemonData';
+import PokemonCard from '../components/index/PokemonCard/PokemonCard';
+import PokemonStats from '../components/index/PokemonData/PokemonStats';
 import { fetchPokemon } from '../utils/fetchPokemon';
 import styles from '../styles/index.module.scss';
 
@@ -52,7 +52,7 @@ export default function Home() {
       </Head>
       <main>
         <section className={styles.container}>
-          <div className={styles['left-container']}>
+          <div className={styles['left']}>
             <SearchBar getPokemon={getPokemon} />
             <strong className={styles.errors}>
               {notFound ? <>{empty}</> : null}
@@ -60,15 +60,22 @@ export default function Home() {
               {loaded ? <Image src={clock} alt='Loading icon' /> : null}
             </strong>
           </div>
-          <div className={styles['right-container']}>
+          <div className={styles['right']}>
             {!loaded && pokemon ? (
-              <Pokemon
+              <PokemonCard
                 name={pokemon['name']}
                 id={pokemon['id']}
                 sprite={pokemon['sprites']['front_default']}
                 types={pokemon['types']}
                 weightKg={pokemon['weight'] / 10}
                 weightLbs={(pokemon['weight'] / 10) * 2.2046}
+                heightM={pokemon['height'] / 10}
+                heightFt={(pokemon['height'] / 10) * 3.28084}
+                artwork={
+                  pokemon['sprites']['other']['official-artwork'][
+                    'front_default'
+                  ]
+                }
               />
             ) : null}
           </div>
@@ -76,7 +83,7 @@ export default function Home() {
 
         {!loaded && pokemon ? (
           <section className={styles.abilities}>
-            <PokemonData
+            <PokemonStats
               abilities={pokemon['abilities']}
               stats={pokemon['stats']}
               items={pokemon['held_items']}

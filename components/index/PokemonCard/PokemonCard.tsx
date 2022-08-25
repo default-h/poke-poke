@@ -26,28 +26,45 @@ const PokemonCard: React.FC<any> = props => {
 
       <figure className={styles.fade}>
         <div className={styles.card}>
+          <p className={styles.identifier}>#{props.id}</p>
           <section className={styles.top}>
             <div className={styles.sprite}>
               <Image
-                src={props.sprite}
+                src={props.artwork}
                 alt={props.name}
-                width={100}
-                height={100}
+                width={400}
+                height={400}
                 className={styles.sprite1}
               />
             </div>
-            <p className={styles.identifier}>#{props.id}</p>
           </section>
           <section className={styles.bottom}>
-            <p className={styles.pokename}>{props.name.toUpperCase()}</p>
-            <ul className={styles.types}>
+            <div>
+              <p className={styles.pokename}>{props.name.toUpperCase()}</p>
+            </div>
+            <div className={styles.types}>
               {props.types.map((type: any, key: any) => (
-                <li key={key}>{type.type.name}</li>
+                <span key={key} className={styles.type}>
+                  {type.type.name}
+                </span>
               ))}
-            </ul>
-            <p>
-              {props.weightKg}kg / {Math.round(props.weightLbs * 10) / 10}lbs
-            </p>
+            </div>
+            <div className={styles['height-weight']}>
+              <section>
+                <h2>weight</h2>
+                <p>
+                  {props.weightKg}kg / {Math.round(props.weightLbs * 10) / 10}
+                  lbs
+                </p>
+              </section>
+              <section>
+                <h2>height</h2>
+                <p>
+                  {props.heightM}m / {Math.round(props.heightFt * 10) / 10}
+                  ft
+                </p>
+              </section>
+            </div>
           </section>
         </div>
       </figure>

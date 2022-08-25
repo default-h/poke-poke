@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Image from 'next/image';
-import styles from './PokemonData.module.scss';
+import styles from './PokemonStats.module.scss';
 import { ProgressBar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
