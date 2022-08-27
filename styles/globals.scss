@@ -8,6 +8,12 @@
   src: url('../public/assets/fonts/FrancoisOne-Regular.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Pompadour';
+  src: url('../public/assets/fonts/03_APompadourBoldSample.woff2')
+    format('woff2');
+}
+
 :root {
   --black: #3a3a3a;
   --black-card: linear-gradient(#3a3a3a, #2d3436);
@@ -19,6 +25,7 @@
   --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   --brand-font: 'FrancoisOne';
   --paragraph-font: Arial, Roboto, sans-serif;
+  --text-shadow: 1px 1px 1px rgba(10, 10, 10, 1);
 }
 
 * {

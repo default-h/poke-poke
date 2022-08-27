@@ -97,6 +97,7 @@ export default function Home() {
                 pokemon['sprites']['other']['official-artwork']['front_default']
               }
               statistics={pokemon['stats']}
+              types={pokemon['types']}
             />
           </section>
         ) : null}

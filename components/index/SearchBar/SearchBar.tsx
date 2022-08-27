@@ -11,7 +11,13 @@ const SearchBar: React.FC<SearchBarProps> = props => {
   const [search, setSearch] = useState('');
   return (
     <div className={styles.container}>
-      <h1>Look up Any Pokémon!</h1>
+      <h1>
+        Learn More About
+        <br />
+        <span>Pokémon</span>
+      </h1>
+
+      <p>Search for any Pokémon that you can think of!</p>
 
       <form
         onSubmit={e => {
@@ -24,10 +30,13 @@ const SearchBar: React.FC<SearchBarProps> = props => {
           name='search'
           onChange={search => setSearch(search.target.value)}
         />
+        <button
+          className={styles.button}
+          onClick={e => props.getPokemon(search)}
+        >
+          Search
+        </button>
       </form>
-      <button className={styles.button} onClick={e => props.getPokemon(search)}>
-        Search
-      </button>
     </div>
   );
 };
