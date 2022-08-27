@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 0rem;
+  gap: 4rem;
   margin-top: 2.5rem;
 
   .left {
@@ -30,13 +30,16 @@
   margin-top: 5rem;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .container {
     flex-direction: row;
 
     .right {
       height: 20rem;
-      width: 50%;
+      width: 100%;
+    }
+    .left {
+      width: 100%;
     }
   }
 }
