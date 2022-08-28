@@ -6,40 +6,42 @@
   gap: 4rem;
   margin-top: 2.5rem;
 
-  .left {
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    .errors {
-      color: var(--black);
-      position: absolute;
-      font-size: 1.2rem;
-      bottom: 21rem;
-    }
-  }
-  .right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 12rem;
+  @media (min-width: 1024px) {
+    flex-direction: row;
   }
 }
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .errors {
+    color: var(--black);
+    position: absolute;
+    font-size: 1.2rem;
+    bottom: 21rem;
+  }
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12rem;
+
+  @media (min-width: 1024px) {
+    height: 20rem;
+    width: 100%;
+    margin-top: 16rem;
+  }
+}
+
 .abilities {
   margin-top: 5rem;
-}
-
-@media (min-width: 1024px) {
-  .container {
-    flex-direction: row;
-
-    .right {
-      height: 20rem;
-      width: 100%;
-    }
-    .left {
-      width: 100%;
-    }
-  }
 }
