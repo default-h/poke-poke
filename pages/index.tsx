@@ -87,6 +87,7 @@ export default function Home() {
         {!loaded && pokemon && !notFound ? (
           <section className={styles.abilities}>
             <PokemonStats
+              name={pokemon['name']}
               abilities={pokemon['abilities']}
               stats={pokemon['stats']}
               items={pokemon['held_items']}

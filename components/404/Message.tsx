@@ -3,7 +3,7 @@ import styles from './Message.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import duck from '../../public/assets/images/psyduck.png';
+import duck from '../../public/assets/images/404.webp';
 
 const Message = () => {
   return (
@@ -16,7 +16,7 @@ const Message = () => {
         </Link>
       </figure>
       <div className={styles.image}>
-        <Image src={duck} alt='A confused Psyduck' />
+        <Image src={duck} alt='' />
       </div>
     </section>
   );

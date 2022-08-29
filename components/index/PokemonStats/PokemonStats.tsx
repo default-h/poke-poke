@@ -5,6 +5,7 @@ import { ProgressBar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 interface StatTypes {
+  name: string;
   abilities: string;
   stats: string[];
   items?: string[];
@@ -17,7 +18,12 @@ const PokemonStats: React.FC<StatTypes> = props => {
     <div className={styles['attributes-container']}>
       <section>
         <figure className={`${styles.fire} ${styles.artwork}`}>
-          <Image src={props.artwork} width={300} height={300} />
+          <Image
+            src={props.artwork}
+            width={300}
+            height={300}
+            alt={props.name}
+          />
           <div className={styles.background}></div>
         </figure>
       </section>
