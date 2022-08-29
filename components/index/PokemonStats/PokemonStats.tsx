@@ -1,11 +1,18 @@
 import React from 'react';
-
 import Image from 'next/image';
 import styles from './PokemonStats.module.scss';
 import { ProgressBar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const PokemonData: React.FC<any> = props => {
+interface StatTypes {
+  abilities: string;
+  stats: string[];
+  items?: string[];
+  artwork: string;
+  types: string[];
+}
+
+const PokemonStats: React.FC<StatTypes> = props => {
   return (
     <div className={styles['attributes-container']}>
       <section>
@@ -16,13 +23,13 @@ const PokemonData: React.FC<any> = props => {
       <section className={styles.attributes}>
         <h3>Stats</h3>
         <ul>
-          {props.stats.map((stat: any, key: any) => (
+          {props.stats.map((statItem: any, key: number) => (
             <li key={key}>
-              <strong>{stat.stat.name}</strong>
+              <strong>{statItem.stat.name}</strong>
               <ProgressBar
                 max={255}
-                now={stat.base_stat}
-                label={stat.base_stat}
+                now={statItem.base_stat}
+                label={statItem.base_stat}
                 variant='warning'
               />
             </li>
@@ -33,4 +40,4 @@ const PokemonData: React.FC<any> = props => {
   );
 };
 
-export default PokemonData;
+export default PokemonStats;

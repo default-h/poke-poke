@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-
+import logo from '../../../public/assets/images/psyduck.png';
 import styles from './SearchBar.module.scss';
 
 interface SearchBarProps {
-  getPokemon: any;
-  // any props that come into the component
+  getPokemon: (query: string) => string;
 }
 
 const SearchBar: React.FC<SearchBarProps> = props => {

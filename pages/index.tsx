@@ -1,13 +1,11 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import React, { useState } from 'react';
-
 import SearchBar from '../components/index/SearchBar/SearchBar';
 import PokemonCard from '../components/index/PokemonCard/PokemonCard';
 import PokemonStats from '../components/index/PokemonStats/PokemonStats';
 import { fetchPokemon } from '../utils/fetchPokemon';
 import styles from '../styles/index.module.scss';
-
 import clock from '../public/assets/icons/clock.svg';
 import psyduck from '../public/assets/images/psyducknotfound.png';
 
@@ -18,7 +16,7 @@ export default function Home() {
   const [notFound, setNotFound] = useState(false);
   const [empty, setEmpty] = useState('');
 
-  const getPokemon: any = async (query: any) => {
+  const getPokemon: any = async (query: string) => {
     if (!query) {
       setEmpty('You must input a Pokémon first!');
       setNotFound(true);
@@ -66,7 +64,6 @@ export default function Home() {
               <PokemonCard
                 name={pokemon['name']}
                 id={pokemon['id']}
-                sprite={pokemon['sprites']['front_default']}
                 types={pokemon['types']}
                 weightKg={pokemon['weight'] / 10}
                 weightLbs={(pokemon['weight'] / 10) * 2.2046}
@@ -93,10 +90,7 @@ export default function Home() {
               abilities={pokemon['abilities']}
               stats={pokemon['stats']}
               items={pokemon['held_items']}
-              artwork={
-                pokemon['sprites']['other']['official-artwork']['front_default']
-              }
-              statistics={pokemon['stats']}
+              artwork={pokemon['sprites']['other']['home']['front_default']}
               types={pokemon['types']}
             />
           </section>
