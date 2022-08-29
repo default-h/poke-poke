@@ -43,8 +43,8 @@
   position: relative;
   animation: bounce 5s infinite;
   animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
-  background: url('../../../public/assets/images/body_bg.png');
-  border-radius: 1.5rem;
+  background: url('../../../public/assets/images/card-background.webp');
+  border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   width: 20rem;
   font-family: var(--brand-font);
@@ -125,7 +125,7 @@
   justify-content: center;
   position: absolute;
   bottom: -2.25rem;
-  border-radius: 1.5rem;
+  border-radius: var(--border-radius);
   padding: 0.2rem 1.5rem;
   background: var(--gold-id);
   color: var(--white);
@@ -151,7 +151,7 @@
   font-size: 1rem;
 
   .type {
-    border-radius: 1rem;
+    border-radius: var(--border-radius);
     padding: 0.1rem 0.5rem;
   }
 }

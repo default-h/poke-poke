@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Poké Poké | Home</title>
+        <title>Poké Finder | Home</title>
         <meta
           name='description'
           content='A free tool for searching Pokémon information.'
