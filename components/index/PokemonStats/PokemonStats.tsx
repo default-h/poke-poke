@@ -16,8 +16,9 @@ const PokemonStats: React.FC<StatTypes> = props => {
   return (
     <div className={styles['attributes-container']}>
       <section>
-        <figure className={styles.artwork}>
-          <Image src={props.artwork} width={200} height={200} />
+        <figure className={`${styles.fire} ${styles.artwork}`}>
+          <Image src={props.artwork} width={300} height={300} />
+          <div className={styles.background}></div>
         </figure>
       </section>
       <section className={styles.attributes}>

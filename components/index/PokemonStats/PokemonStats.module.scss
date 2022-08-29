@@ -4,19 +4,24 @@
 
 .attributes-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 2rem;
   background-color: var(--off-white);
-  padding: 2rem;
-  flex-wrap: wrap;
-  position: relative;
+  padding: 4rem;
+
+  @media (min-width: 1024px) {
+    gap: 5rem;
+    flex-direction: row;
+  }
 
   .attributes {
     padding: 1rem;
     background-color: var(--white);
     width: 20rem;
-    border-radius: 0.4rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 
     h3 {
       text-align: center;
@@ -24,81 +29,26 @@
   }
 }
 
-.artwork::before {
-  content: '';
-  background-color: var(--white);
-  border-radius: 100%;
-  width: 100px;
-  height: 100px;
+.artwork {
+  border-radius: 50%;
+  border: 5px solid var(--white);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  z-index: 1;
+}
+
+.background {
+  background: url('../../../public/assets/images/stats-background.webp');
+  background-size: cover;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+  width: 100%;
+  height: 100%;
+  transform: scale(1.4);
   position: absolute;
-}
-
-// type classes
-
-.fire {
-  background: #ee8130;
-}
-
-.water {
-  background: #6390f0;
-}
-
-.electric {
-  background: #f7d02c;
-}
-
-.grass {
-  background: #7ac74c;
-}
-
-.ice {
-  background: #96d9d6;
-}
-
-.fighting {
-  background: #c22e28;
-}
-
-.poison {
-  background: #a33ea1;
-}
-
-.ground {
-  background: #e2bf65;
-}
-
-.flying {
-  background: #a98ff3;
-}
-
-.psychic {
-  background: #f95587;
-}
-
-.bug {
-  background: #a6b91a;
-}
-
-.rock {
-  background: #b6a136;
-}
-
-.ghost {
-  background: #735797;
-}
-
-.dragon {
-  background: #6f35fc;
-}
-
-.dark {
-  background: #705746;
-}
-
-.steel {
-  background: #b7b7ce;
-}
-
-.fairy {
-  background: #d685ad;
+  margin-left: -3rem;
+  margin-top: -1rem;
+  z-index: -1;
+  top: 0;
 }
