@@ -1,13 +1,12 @@
 # Pokémon Finder ⚡
 
-![Screenshot of Website](https://i.imgur.com/BRBbHEw.png)
-![GIF #1 of Website](https://media.giphy.com/media/SClqTWjBObZR70hsqs/giphy.gif)
-![GIF #2 of Website](https://media.giphy.com/media/JF8ASDrmEOcHpCAmpO/giphy.gif)
+![Screenshot of Website](https://i.imgur.com/diceZOE.png)
+![GIF #1 of Website](https://i.imgur.com/bqwjJmt.gif)
 
 <p align="center">
 Live Site: https://poke-finder.vercel.app/
 <br/>
-Video Demo: https://youtu.be/e_Wi2Kdbabo
+Video Demo: https://youtu.be/2TsZ-eIoh9s
 
 ## Overview
 
