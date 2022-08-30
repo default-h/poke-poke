@@ -6,7 +6,7 @@ import PokemonCard from '../components/index/PokemonCard/PokemonCard';
 import PokemonStats from '../components/index/PokemonStats/PokemonStats';
 import { fetchPokemon } from '../utils/fetchPokemon';
 import styles from '../styles/index.module.scss';
-import clock from '../public/assets/icons/clock.svg';
+import loader from '../public/assets/icons/gridload.svg';
 
 export default function Home() {
   const [pokemon, setPokemon] = useState();
@@ -63,7 +63,11 @@ export default function Home() {
             ) : null}
           </div>
           <div className={styles['right']}>
-            {loaded ? <Image src={clock} alt='Loading icon' /> : null}
+            {loaded ? (
+              <div className={styles.loader}>
+                <Image src={loader} alt='' />
+              </div>
+            ) : null}
             {!loaded && pokemon && !notFound ? (
               <PokemonCard
                 name={pokemon['name']}
