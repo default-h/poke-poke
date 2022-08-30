@@ -1,3 +1,8 @@
+.questionmark {
+  font-family: Pokemon;
+  font-size: 30rem;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -14,6 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 
   @media (min-width: 1024px) {
     flex-direction: row;
@@ -24,7 +30,7 @@
     color: var(--black);
     position: absolute;
     font-size: 1.2rem;
-    bottom: 21rem;
+    bottom: -3rem;
   }
 }
 
@@ -32,7 +38,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 18rem;
+  margin-top: 15rem;
 
   @media (min-width: 1024px) {
     height: 20rem;

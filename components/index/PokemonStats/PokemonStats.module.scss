@@ -1,5 +1,11 @@
-.waves {
-  width: 101vw;
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .attributes-container {
@@ -10,23 +16,44 @@
   gap: 2rem;
   background-color: var(--off-white);
   padding: 4rem;
+  animation: fade 0.6s ease-out;
 
   @media (min-width: 1024px) {
-    gap: 5rem;
+    gap: 8rem;
     flex-direction: row;
   }
 
   .attributes {
-    padding: 1rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url('../../../public/assets/images/progress-background.webp');
     background-color: var(--white);
-    width: 20rem;
+    width: 28rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
 
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0;
+      text-transform: uppercase;
+    }
+
     h3 {
       text-align: center;
+      font-family: var(--brand-font);
+      text-transform: capitalize;
     }
   }
+}
+
+.progressbar {
+  width: 22rem;
+  padding: 0;
 }
 
 .artwork {

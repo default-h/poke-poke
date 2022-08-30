@@ -17,7 +17,7 @@ const PokemonStats: React.FC<StatTypes> = props => {
   return (
     <div className={styles['attributes-container']}>
       <section>
-        <figure className={`${styles.fire} ${styles.artwork}`}>
+        <figure className={styles.artwork}>
           <Image
             src={props.artwork}
             width={300}
@@ -28,7 +28,7 @@ const PokemonStats: React.FC<StatTypes> = props => {
         </figure>
       </section>
       <section className={styles.attributes}>
-        <h3>Stats</h3>
+        <h3>{props.name}&#39;s Stats</h3>
         <ul>
           {props.stats.map((statItem: any, key: number) => (
             <li key={key}>
@@ -37,6 +37,7 @@ const PokemonStats: React.FC<StatTypes> = props => {
                 max={255}
                 now={statItem.base_stat}
                 label={statItem.base_stat}
+                className={styles.progressbar}
                 variant='warning'
               />
             </li>

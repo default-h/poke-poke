@@ -7,14 +7,13 @@ import PokemonStats from '../components/index/PokemonStats/PokemonStats';
 import { fetchPokemon } from '../utils/fetchPokemon';
 import styles from '../styles/index.module.scss';
 import clock from '../public/assets/icons/clock.svg';
-import psyduck from '../public/assets/images/psyducknotfound.png';
 
 export default function Home() {
   const [pokemon, setPokemon] = useState();
   const [loaded, setLoaded] = useState(false);
 
   const [notFound, setNotFound] = useState(false);
-  const [empty, setEmpty] = useState('');
+  const [empty, setEmpty] = useState('tree');
 
   const getPokemon: any = async (query: string) => {
     if (!query) {
@@ -36,13 +35,19 @@ export default function Home() {
         setNotFound(true);
         setEmpty(`"${query.toUpperCase()}" does not exist. Please, try again.`);
       }
-    }, 1000);
+    });
   };
+
+  const unknownType = [
+    {
+      type: { name: '???' },
+    },
+  ];
 
   return (
     <>
       <Head>
-        <title>Poké Finder | Home</title>
+        <title>Home |Poké Finder</title>
         <meta
           name='description'
           content='A free tool for searching Pokémon information.'
@@ -76,11 +81,21 @@ export default function Home() {
                 }
               />
             ) : null}
-            <figure>
-              {notFound ? (
-                <Image src={psyduck} width={400} height={400} />
-              ) : null}
-            </figure>
+
+            {notFound ? (
+              <PokemonCard
+                name={'Unknown'}
+                id={404}
+                types={unknownType}
+                weightKg={0}
+                weightLbs={0}
+                heightM={0}
+                heightFt={0}
+                artwork={
+                  'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/54.png'
+                }
+              />
+            ) : null}
           </div>
         </section>
 

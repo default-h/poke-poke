@@ -10,7 +10,7 @@ interface Type {
 interface CardTypes {
   name: string;
   id: number;
-  types: string[];
+  types: { type: { name: string } }[];
   weightKg: number;
   weightLbs: number;
   heightM: number;
