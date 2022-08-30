@@ -58,13 +58,12 @@ export default function Home() {
         <section className={styles.container}>
           <div className={styles['left']}>
             <SearchBar getPokemon={getPokemon} />
-            <strong className={styles.errors}>
-              {notFound ? <>{empty}</> : null}
-
-              {loaded ? <Image src={clock} alt='Loading icon' /> : null}
-            </strong>
+            {notFound ? (
+              <strong className={styles.errors}>{empty}</strong>
+            ) : null}
           </div>
           <div className={styles['right']}>
+            {loaded ? <Image src={clock} alt='Loading icon' /> : null}
             {!loaded && pokemon && !notFound ? (
               <PokemonCard
                 name={pokemon['name']}

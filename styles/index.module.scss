@@ -8,10 +8,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 2.5rem;
+  margin-top: 6rem;
 
   @media (min-width: 1024px) {
     flex-direction: row;
+    margin-top: 2.5rem;
   }
 }
 
@@ -27,14 +28,17 @@
   }
 
   .errors {
-    color: var(--black);
+    color: #be123c;
     position: absolute;
-    font-size: 1.2rem;
-    bottom: -4rem;
+    font-size: 0.87rem;
+    top: -4rem;
     text-align: center;
+    background-color: #fff0f2;
+    padding: 0.5rem 2rem;
+    border-radius: var(--border-radius);
 
     @media (min-width: 1024px) {
-      bottom: -3rem;
+      top: -4rem;
     }
   }
 }
