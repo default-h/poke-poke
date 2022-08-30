@@ -7,7 +7,7 @@
 <p align="center">
 Live Site: https://poke-finder.vercel.app/
 <br/>
-Video Demo: https://youtu.be/zn_78N9fuWo
+Video Demo: https://youtu.be/e_Wi2Kdbabo
 
 ## Overview
 
