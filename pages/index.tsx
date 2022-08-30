@@ -17,7 +17,7 @@ export default function Home() {
 
   const getPokemon: any = async (query: string) => {
     if (!query) {
-      setEmpty('You must input a Pokémon first!');
+      setEmpty('Uh oh! You must input a Pokémon!');
       setNotFound(true);
       return;
     }
@@ -33,7 +33,7 @@ export default function Home() {
       } catch (err) {
         setLoaded(false);
         setNotFound(true);
-        setEmpty(`"${query.toUpperCase()}" does not exist. Please, try again.`);
+        setEmpty(`"${query.toUpperCase()}" does not exist. Please, try again!`);
       }
     });
   };
@@ -47,7 +47,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Home |Poké Finder</title>
+        <title>Home | Poké Finder</title>
         <meta
           name='description'
           content='A free tool for searching Pokémon information.'
