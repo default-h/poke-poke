@@ -23,11 +23,15 @@ Pokémon Finder is a free, open source tool to look up your favorite Pokémon.
 
 ## Highlights
 
-TBC
-
-## Outcomes
-
-TBC
+- First TypeScript project
+  - I faced tons of problems with types at first, but I'm glad I was able to learn so much about TypeScript and the importance of types in projects (most notable enjoyments were more verbose with errors and increased prevention of build-time issues)
+- Incorporates mobile-first design
+- Responsive across different devices
+- Consumes data from PokéAPI
+  - Users can query individual Pokémon to return artwork, types, weight and height, and attributes
+- Contains form validation and error handling
+- Disables animation for users who prefer reduced motion
+- Reinforces HTML semantics
 
 ## To-Do List
 
