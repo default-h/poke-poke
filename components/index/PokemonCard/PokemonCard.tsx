@@ -2,11 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import styles from './PokemonCard.module.scss';
 
-interface Type {
-  name: string;
-  url: string;
-}
-
 interface CardTypes {
   name: string;
   id: number;
