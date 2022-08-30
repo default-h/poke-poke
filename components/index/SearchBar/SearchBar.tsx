@@ -36,6 +36,7 @@ const SearchBar: React.FC<SearchBarProps> = props => {
           e.preventDefault();
         }}
       >
+        <label htmlFor='search'></label>
         <input
           type='text'
           id='search'
@@ -45,10 +46,12 @@ const SearchBar: React.FC<SearchBarProps> = props => {
             setSearch(search.target.value);
           }}
           onInput={handleInput}
+          aria-label='Search Pokemon'
         />
         <button
           className={styles.button}
           onClick={e => props.getPokemon(search)}
+          aria-label='Search'
         >
           Search
         </button>
