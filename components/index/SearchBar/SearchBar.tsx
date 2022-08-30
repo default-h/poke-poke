@@ -47,6 +47,7 @@ const SearchBar: React.FC<SearchBarProps> = props => {
           }}
           onInput={handleInput}
           aria-label='Search Pokemon'
+          autoComplete='off'
         />
         <button
           className={styles.button}
