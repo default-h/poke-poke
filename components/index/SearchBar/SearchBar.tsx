@@ -8,6 +8,19 @@ interface SearchBarProps {
 
 const SearchBar: React.FC<SearchBarProps> = props => {
   const [search, setSearch] = useState('');
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === ' ') {
+      e.preventDefault();
+    }
+  };
+
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.currentTarget.value.includes(' ')) {
+      e.currentTarget.value = e.currentTarget.value.replace(/\s/g, '');
+    }
+  };
+
   return (
     <div className={styles.container}>
       <h1>
@@ -27,7 +40,11 @@ const SearchBar: React.FC<SearchBarProps> = props => {
           type='text'
           id='search'
           name='search'
-          onChange={search => setSearch(search.target.value)}
+          onKeyDown={handleKeyDown}
+          onChange={search => {
+            setSearch(search.target.value);
+          }}
+          onInput={handleInput}
         />
         <button
           className={styles.button}
