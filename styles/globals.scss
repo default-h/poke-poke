@@ -19,29 +19,25 @@
 }
 
 :root {
-  --off-black: #323232;
   --black: #141316;
-  --black-card: linear-gradient(#3a3a3a, #2d3436);
-  --white: #ffffff;
-  --off-white: #f3f5f7;
-  --yellow: #f7ba14;
-  --gold-id: linear-gradient(#fad921, #f7ba14);
-  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   --brand-font: 'InterB';
+  --border-radius: 2rem;
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --gold-id: linear-gradient(#fad921, #f7ba14);
+  --off-white: #f3f5f7;
   --paragraph-font: 'InterM', Roboto, sans-serif;
   --text-shadow: 1px 1px 0px var(--black);
-  --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  --border-radius: 2rem;
+  --white: #ffffff;
+  --yellow: #f7ba14;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -58,7 +54,7 @@ a {
 }
 
 button {
-  cursor: pointer;
   background: none;
   border: none;
+  cursor: pointer;
 }
