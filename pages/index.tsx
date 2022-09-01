@@ -15,7 +15,7 @@ export default function Home() {
   const [notFound, setNotFound] = useState(false);
   const [empty, setEmpty] = useState('tree');
 
-  const getPokemon: any = async (query: string) => {
+  const getPokemon = async (query: string) => {
     if (!query) {
       setEmpty('Uh oh! You must input a Pokémon!');
       setNotFound(true);

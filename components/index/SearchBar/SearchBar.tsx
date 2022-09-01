@@ -3,7 +3,7 @@ import logo from '../../../public/assets/images/psyduck.png';
 import styles from './SearchBar.module.scss';
 
 interface SearchBarProps {
-  getPokemon: (query: string) => string;
+  getPokemon: (query: string) => void;
 }
 
 const SearchBar: React.FC<SearchBarProps> = props => {
