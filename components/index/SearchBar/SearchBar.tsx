@@ -36,7 +36,9 @@ const SearchBar: React.FC<SearchBarProps> = props => {
           e.preventDefault();
         }}
       >
-        <label htmlFor='search'></label>
+        <label htmlFor='search' className={styles['sr-only']}>
+          Search
+        </label>
         <input
           type='text'
           id='search'
