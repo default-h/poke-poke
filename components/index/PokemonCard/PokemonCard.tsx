@@ -31,7 +31,7 @@ const PokemonCard: React.FC<CardTypes> = props => {
         <section className={styles.bottom}>
           <h2 className={styles.pokename}>{props.name.toUpperCase()}</h2>
           <div className={styles.types}>
-            {props.types.map((type: any, key: number) => (
+            {props.types.map((type, key) => (
               <span
                 key={key}
                 className={`${styles[type.type.name]} ${styles.type}`}
